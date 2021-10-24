@@ -31,7 +31,7 @@
         android:id="@+id/scrollableInputFields"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/continueButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,61 +135,62 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueButton"
+
+                style="@style/button"
+
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/app_continue_button"
+                app:layout_constraintBottom_toTopOf="@+id/importantInfo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sex_field" />
+
+            <TextView
+                android:id="@+id/importantInfo"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="14dp"
+                android:text="@string/app_termes_agreement"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textColorLink="#4B09F3"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/activity_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="LinkPurposeUnclearCheck" />
+
+            <ImageView
+                android:id="@+id/activity_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_activity_black"
+                app:layout_constraintBottom_toTopOf="@+id/logo_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/logo_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:src="@drawable/ic_app_logo_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/continueButton"
-
-        style="@style/button"
-
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="30dp"
-        android:text="@string/app_continue_button"
-        app:layout_constraintBottom_toTopOf="@+id/importantInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollableInputFields" />
-
-    <TextView
-        android:id="@+id/importantInfo"
-
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="14dp"
-        android:text="@string/app_termes_agreement"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorLink="#4B09F3"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/activity_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="LinkPurposeUnclearCheck" />
-
-    <ImageView
-        android:id="@+id/activity_black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:src="@drawable/ic_activity_black"
-        app:layout_constraintBottom_toTopOf="@+id/logo_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/logo_black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:src="@drawable/ic_app_logo_black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
