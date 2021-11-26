@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_task_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_arrow_blue"
+        app:menu="@menu/task_info_bar" />
+
+    <TextView
+        android:id="@+id/my_task_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_task_bar"
+        app:layout_constraintBottom_toTopOf="@id/my_task_time_consume"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/my_task_time_consume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_task_distance"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/my_task_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_task_time_consume"
+        app:layout_constraintBottom_toTopOf="@id/my_task_start_time" />
+
+    <TextView
+        android:id="@+id/my_task_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Старт"
+        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/my_task_start_time_val"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/my_task_start_time_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/my_task_start_time"
+        app:layout_constraintEnd_toStartOf="@id/my_task_line"
+        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/my_task_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:text="|"
+        android:textColor="#808080"
+
+        app:layout_constraintStart_toEndOf="@id/my_task_start_time_val"
+        app:layout_constraintEnd_toStartOf="@id/my_task_start_time"
+        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+
+    <TextView
+        android:id="@+id/my_task_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Финиш"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintStart_toEndOf="@id/my_task_start_time_val"
+        app:layout_constraintEnd_toStartOf="@id/my_task_end_time_val"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+
+    <TextView
+        android:id="@+id/my_task_end_time_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/my_task_end_time"
+        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/my_task_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_task_start_time">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Комментарий" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
