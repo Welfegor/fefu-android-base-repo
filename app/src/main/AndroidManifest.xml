@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Activity">
 
+        <activity android:name=".TrackerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
         <activity android:name=".WelcomeScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -25,6 +33,7 @@
         <activity android:name=".RegistrationScreenActivity"
             android:exported="true">
         </activity>
+        -->
 
     </application>
 
