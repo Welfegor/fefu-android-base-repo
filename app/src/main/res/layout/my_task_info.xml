@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_task_bar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -13,60 +13,60 @@
         app:menu="@menu/task_info_bar" />
 
     <TextView
-        android:id="@+id/my_task_distance"
+        android:id="@+id/task_distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginHorizontal="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/my_task_bar"
-        app:layout_constraintBottom_toTopOf="@id/my_task_time_consume"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/task_duration"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/my_task_time_consume"
+        android:id="@+id/task_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_task_distance"
+        app:layout_constraintTop_toBottomOf="@+id/task_distance"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/my_task_date"
+        android:id="@+id/task_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginHorizontal="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/my_task_time_consume"
-        app:layout_constraintBottom_toTopOf="@id/my_task_start_time" />
+        app:layout_constraintTop_toBottomOf="@id/task_duration"
+        app:layout_constraintBottom_toTopOf="@id/start" />
 
     <TextView
-        android:id="@+id/my_task_start_time"
+        android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginHorizontal="32dp"
         android:text="Старт"
-        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintTop_toBottomOf="@id/task_date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/my_task_start_time_val"
+        app:layout_constraintEnd_toStartOf="@id/start_time"
         app:layout_constraintHorizontal_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/my_task_start_time_val"
+        android:id="@+id/start_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/my_task_start_time"
-        app:layout_constraintEnd_toStartOf="@id/my_task_line"
-        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintStart_toEndOf="@id/start"
+        app:layout_constraintEnd_toStartOf="@id/divide"
+        app:layout_constraintTop_toBottomOf="@id/task_date"
         app:layout_constraintHorizontal_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/my_task_line"
+        android:id="@+id/divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -74,45 +74,45 @@
         android:text="|"
         android:textColor="#808080"
 
-        app:layout_constraintStart_toEndOf="@id/my_task_start_time_val"
-        app:layout_constraintEnd_toStartOf="@id/my_task_start_time"
-        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintStart_toEndOf="@id/start_time"
+        app:layout_constraintEnd_toStartOf="@id/start"
+        app:layout_constraintTop_toBottomOf="@id/task_date"
         app:layout_constraintHorizontal_chainStyle="packed" />
 
 
     <TextView
-        android:id="@+id/my_task_end_time"
+        android:id="@+id/finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Финиш"
 
         android:layout_marginTop="4dp"
         android:layout_marginStart="32dp"
-        app:layout_constraintTop_toBottomOf="@id/my_task_date"
-        app:layout_constraintStart_toEndOf="@id/my_task_start_time_val"
-        app:layout_constraintEnd_toStartOf="@id/my_task_end_time_val"
+        app:layout_constraintTop_toBottomOf="@id/task_date"
+        app:layout_constraintStart_toEndOf="@id/start_time"
+        app:layout_constraintEnd_toStartOf="@id/finish_time"
         app:layout_constraintHorizontal_chainStyle="packed" />
 
 
     <TextView
-        android:id="@+id/my_task_end_time_val"
+        android:id="@+id/finish_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/my_task_end_time"
-        app:layout_constraintTop_toBottomOf="@id/my_task_date"
+        app:layout_constraintStart_toEndOf="@id/finish"
+        app:layout_constraintTop_toBottomOf="@id/task_date"
         app:layout_constraintHorizontal_chainStyle="packed" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/my_task_comments"
+        android:id="@+id/comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginHorizontal="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_task_start_time">
+        app:layout_constraintTop_toBottomOf="@+id/start">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
