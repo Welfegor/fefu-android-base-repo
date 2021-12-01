@@ -10,19 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Activity">
 
-        <activity android:name=".innerTracker.TrackerActivity"
+        <activity android:name=".innerTracker.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".outerTracker.WelcomeScreenActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".outerTracker.LoginScreenActivity"
