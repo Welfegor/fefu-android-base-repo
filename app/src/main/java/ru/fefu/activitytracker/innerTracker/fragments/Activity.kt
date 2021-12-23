@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker
+package ru.fefu.activitytracker.innerTracker.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import ru.fefu.activitytracker.databinding.FragmentActivityBinding
+import ru.fefu.activitytracker.innerTracker.adapter.ActivityFragmentAdapter
 
-class Activity : Fragment(R.layout.fragment_activity) {
+
+class Activity : Fragment() {
     private var _binding: FragmentActivityBinding? = null
     private val binding get() = _binding!!
 
@@ -23,10 +25,8 @@ class Activity : Fragment(R.layout.fragment_activity) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.pagerActivity.adapter = ActivityFragmentAdapter(this)
-
-        TabLayoutMediator(binding.tabsActivity, binding.pagerActivity) { tab, position ->
-            if (position == 0)
-                tab.text = "Мои"
+        TabLayoutMediator(binding.tabsActivity, binding.pagerActivity) {tab, position ->
+            if (position == 0) tab.text = "Мои"
             else tab.text = "Пользователей"
         }.attach()
     }
@@ -37,12 +37,6 @@ class Activity : Fragment(R.layout.fragment_activity) {
     }
 
     companion object {
-        const val tag = "activity_fragment"
-
-        fun newInstance() : Activity {
-            val fragment = Activity()
-            fragment.arguments = Bundle()
-            return fragment
-        }
+        fun newInstance(): Activity {return Activity()}
     }
 }

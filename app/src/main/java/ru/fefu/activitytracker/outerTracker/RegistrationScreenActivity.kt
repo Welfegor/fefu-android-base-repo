@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker
+package ru.fefu.activitytracker.outerTracker
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

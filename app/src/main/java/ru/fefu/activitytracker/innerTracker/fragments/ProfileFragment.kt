@@ -1,4 +1,4 @@
-package ru.fefu.activitytracker
+package ru.fefu.activitytracker.innerTracker.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.fefu.activitytracker.databinding.FragmentProfileBinding
 
-class Profile : Fragment(R.layout.fragment_profile) {
+
+class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
@@ -27,11 +28,6 @@ class Profile : Fragment(R.layout.fragment_profile) {
 
     companion object {
         const val tag = "profile_fragment"
-
-        fun newInstance() : Profile {
-            val fragment = Profile()
-            fragment.arguments = Bundle()
-            return fragment
-        }
+        fun newInstance(): ProfileFragment {return ProfileFragment()}
     }
 }
